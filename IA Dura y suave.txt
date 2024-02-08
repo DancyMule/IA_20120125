@@ -1,0 +1,23 @@
+10:10 a. m. 30/01/2024
+
+La suave le sabe pero no piensa
+La dura sabe pensar
+
+PT1. El proyecto consistió en el intento de imitar el proceso natural de aprendizaje de los niños en las máquinas.
+     Los datos muestrales estaban en esatdo puro; se buscó extraer datos específicos:
+
+		Sistema 1: Identificar discurso humano
+		Sistema 2: Identificar al hablante
+		Sistema 3: Idenctificar discurso según lugar (El entorno no linguístico es exclusivamente el mas relevante, el entorno funcional o espacial 			   puede fomentar el aprendizaje de ciertas cosas)
+		
+     Se concluye que la técnica y la creatividad es imprescindible para un desarrollo eficaz
+
+PT2. El aterrizaje de un avión se hace con inteligencias específicas no generales (Suave/dura).
+PT3. Perritos juegando, con muestreo de partidos reales; los perritos deciden como jugar para anotar un gol.
+
+
+El profe:
+
+	• Se requieren aproximadamente 5,000 imagenes representativas para que un modelo identifique algo en específico.
+	• El muestreo debe ser en más de un espacio ya que si se hace todo en el mismo espacio dará falsos positivos.
+	• HCB; Es el tipo de color que es más facil usar dentro de un analisis (RGB y CYMK tambien son útiles).

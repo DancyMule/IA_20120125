@@ -1,0 +1,84 @@
+Basandose en los ejercicios:
+Tablero 8*8, 8 reinas que no se ataquen.
+
+SOLUCION:
+Se soluciona al llegar al 8vo nivel de forma exitosa
+[R][ ][ ][ ][ ][ ][ ][ ] 1
+[ ][ ][ ][ ][R][ ][ ][ ] 2
+[ ][ ][ ][ ][ ][ ][ ][R] 3
+[ ][ ][ ][ ][ ][R][ ][ ] 4
+[ ][ ][R][ ][ ][ ][ ][ ] 5
+[ ][ ][ ][ ][ ][ ][ ][R] 6
+[ ][R][ ][ ][ ][ ][ ][ ] 7
+[ ][ ][ ][R][ ][ ][ ][ ] 8
+ A  B  C  D  E  F  G  H
+Tablero 4*4, 4 reinas que no se ataquen.
+    NIVEL 1
+    [R][ ][ ][ ] 1 
+    [ ][ ][ ][ ] 2
+    [ ][ ][ ][ ] 3
+    [ ][ ][ ][ ] 4
+    A  B  C  D 
+    NIVEL 2
+    [R][ ][ ][ ] 1                          
+    [ ][ ][R][ ] 2                          
+    [ ][ ][ ][ ] 3                              
+    [ ][ ][ ][ ] 4                              
+    A  B  C  D                                      
+    NIVEL 3
+    [R][ ][ ][ ] 1                          
+    [ ][ ][R][ ] 2                          
+    [ ][ ][ ][ ] 3  AL NO PODER COLOCARSE INDICA QUE NO ES CORRECTA ESTA RAMA                            
+    [ ][ ][ ][ ] 4                              
+    A  B  C  D         
+
+    SOLUCION
+    NIVEL 4
+    [ ][R][ ][ ] 1                          
+    [ ][ ][ ][R] 2                          
+    [R][ ][ ][ ] 3                             
+    [ ][ ][R][ ] 4                              
+    A  B  C  D                                
+
+Pollo, coyote, granos de Maíz y granjero cruzando el río.
+
+
+3 Canibales y 3 monjes, cruzar todos el río (Siempre debe haber mas monjes de cada lado)
+
+
+NIVEL 1:
+		  →
+[C,C] & [M,M]|   [M]   | [C] & []
+
+Cruzan un Monje y un Canival
+
+NIVEL 2:
+		 →
+[] & [M,M,M]|   [C]   | [C,C] & []
+
+El Monje vuelve y los dos canivales restantes cruzan
+NIVEL 3:
+		  ←
+[C] & [M]|   [M,C]   | [C] & [M]
+
+Un Canival vuelve, se queda y dos Monjes se van. un Monje se queda con un Canival y un Monje vuelve con un Canival 	
+
+NIVEL 4:
+		→
+[C, C] & []|   [M]   | [C] & [M,M]
+
+Se van ambos Monjes y se quedan del otro lado. El Canival vuelve
+NIVEL 5:
+	      →
+[C] & []|   [C,C]   | [] & [M,M,M]
+
+El Canival va y vuelve por uno Canival
+NIVEL 6:
+	    →
+[] & []|   []   | [C,C,C] & [M,M,M]
+
+El Canival va y vuelve por el otro Canival, todos han cruzado sin que haya mas canivales que monjes a la vez
+
+NIVEL 7:
+
+[] & []|   []   | [] & []

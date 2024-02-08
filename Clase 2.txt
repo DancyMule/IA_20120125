@@ -1,0 +1,29 @@
+10:28 a. m. 06/02/2024
+
+Ejemplo de la ruta mas corta para llegar al vecino
+
+ 1    2    3    4    5
+[  ] [  ] [  ] [  ] [  ]
+[  ] [  ] [  ] [  ] [  ]
+[☺] [  ] [  ] [  ] [☻]
+[  ] [  ] [  ] [  ] [  ]
+[  ] [  ] [  ] [  ] [  ]
+
+
+Salto diagonal cuesta 14 G
+Salto vertical/horizontal cuesta 10 G
+G = Costo acumulado de saltar
+H = Distancia directa con la meta sin importar obstaculos 
+LA (Lista Abierta): Solo se puede pasar una vez en cada elemento
+LC (Lista Cerrada): Orden a seguir
+
+
+		F = G + H
+
+Siempre los saltos se harán al lugar con una menor F
+
+Cada nueva posición es la posición padre a partir de la cual se harán los calculos
+
+LC RESOLUTIVA: 11, 7, 3, 15
+
+En caso de llegar a un sumidero, hay que ir a un elemento de la lista abierta del padre anterior (La siguiente F con menor valor)
