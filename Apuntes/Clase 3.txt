@@ -1,0 +1,55 @@
+¿Dónde está wally?
+
+Se deben establecer patrones (Caracteristicas):
+
+	• Lentes
+	• Gorro
+	• Colores
+	• Forma
+	• Etc.
+
+
+Se pueden recibir entradas en cualquier instante; 
+
+Islas otra vez
+
+
+[  ][--][--][  ][  ][  ]
+[  ][  ][  ][  ][--][  ]
+[  ][  ][  ][  ][--][  ]
+[  ][--][--][  ][--][  ]
+[  ][--][--][  ][  ][  ]
+[  ][  ][  ][  ][--][  ]
+
+Al encontrar una isla, se crea una variable temporal para poder voler, se rodea la isla con la finalidad de reconocerla y finalmente se continua el recorrigo original (Migaja de pan).
+
+
+Se asemeja a la localización/conteo de células
+
+
+
+La busqueda profunda es un recorrido de preorden
+
+Void recorre(*ptr){
+	if(ptr!=null){
+		imprime(ptr → dato);	
+		recorre(ptr → izq); →  →  →  →
+		recorre(ptr → der);	       ↓	     
+		     }			
+			←	←	←      ↓
+			
+		  }	↓
+
+			↓
+	recorre(x-1, y-1);
+	recorre(x+1, y-1);
+	recorre(x-1, y+1);
+	recorre(x+1, y+1);
+
+
+Todasl las redes neuronales trabajan con números, por lo que todo se debe traducir 
+
+
+Medida de rendimientp = Jala bien/No jala bien
+
+

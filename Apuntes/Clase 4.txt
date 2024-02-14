@@ -1,0 +1,9 @@
+Problema de Flavio Josefo (Secuencia de percepción):
+
+40 Solados en circulo, matan al de la izquierda hasta que quede uno ¿Dónde se debe de colocar Josefo?
+
+
+100 prisioneros (Prueba de rendimiento):
+
+100 cajas con número, cada prisionero tiene un número. Si todos encuentran su numero ganan
+Sí uno falla todos mueren,cada uno puede abrir 50 cajas.
