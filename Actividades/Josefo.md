@@ -183,6 +183,7 @@ LugarSuperviviente = 2(y)+1
 $$
 
 Podemos ver que coincide perfectamente con el lugar seguro que habíamos obtenido manualmente.
+
 $$
 LugarSuperviviente = 5
 $$
@@ -222,6 +223,7 @@ $$
 
 #### Formula
 Aplicamos la fórmula y desarrollamos:
+
 $$
 y = (11 - (2^3))
 $$
@@ -427,9 +429,11 @@ $$
 Como se ha visto, ambos resultados; manual y con calculo han coincidido,
 
 ## Solución a 41
- $$
+
+$$
 y = (41 - (2^5))
 $$
+
 $$
 y = 9
 $$
