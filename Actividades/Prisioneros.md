@@ -47,6 +47,7 @@ Ahora recordemos que tenemos 50 intentos para abrir la caja correcta, por lo que
 
 
 Primero debemos entender que el número total de ciclos únicos de 100 es son:
+
 $$
 ciclos = 100!/100
 $$
@@ -54,9 +55,11 @@ $$
 $$
 P(100) = (ciclos)/(permutaciones)
 $$
+
 $$
 P(100) = (100!/100)/(100!)
 $$
+
 $$
 P(100) = (1/100)
 $$
@@ -66,15 +69,19 @@ Esto representa que hay un 1% de que una disposición aleatoria de números y ca
 $$
 P(99) = 1/99%
 $$
+
 $$
 P(98) = 1/98%
 $$
+
 $$
 P(97) = 1/97%
 $$
+
 $$
 P(96) = 1/96%
 $$
+
 $$
 ...
 $$
@@ -84,9 +91,11 @@ Así que la probabilidad de que haya un ciclo de más de 50 cajas es la suma de 
 $$
 P(+50) = {1/50}+{1/51}+{1/52}+{1/53}+...+{1/100}
 $$
+
 $$
 P(+50) = .69
 $$
+
 Lo cual nos da como resultado que el 31.18% de las veces habrá un bucle menor de 50.
 
 A primera vista quizás es un poco raro pero hay que recordar que la probabilidad del largo de los ciclos es una probabilidad independiente que estamos comparando contra la probabilidad de que todos aleatoriamente encuntren su número:
