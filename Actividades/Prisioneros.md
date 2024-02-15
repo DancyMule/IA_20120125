@@ -110,13 +110,13 @@ Por lo que podemos replicarla aumentando el número dr prisioneros, obteniendo u
 
 
 $$
-P(exito1000) = 1-({1/50}+{1/51}+...+{1/1000}) = 30.74 
+P(exito) = 1-({1/50}+{1/51}+...+{1/1000}) = 30.74 
 $$
 $$
-P(exito1000000) = 1-({1/50}+{1/51}+...+{1/1000000}) = 30.68533
+P(exito) = 1-({1/50}+{1/51}+...+{1/1000000}) = 30.68533
 $$
 $$
-P(exito1000000000) = 1-({1/50}+{1/51}+...+{1/1000000000}) = 30.68528
+P(exito) = 1-({1/50}+{1/51}+...+{1/1000000000}) = 30.68528
 $$
 
 Como se puede apreciar, mietras mas prisioneros agregamos, más nos acercamos a la tasa de éxito real. Su aproximación es:
