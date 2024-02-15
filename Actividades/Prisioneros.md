@@ -8,8 +8,7 @@ Tenemos 100 presos que pueden abrir la mitad de 100 cajas para encontrar su núm
 $$
 (1/2)^{100} = 7.888609×10^{−31}
 $$
-<br>       
-<br>       
+       
 Es un probabilidad exageradamente baja, por lo que abrir al azar no es buena estrategia.
 En cambio si establecemos una estrategia de busqueda por variable obtenida (número que está en cada caja) es mucho más probable que lo encotremos
 
