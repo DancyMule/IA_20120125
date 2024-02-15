@@ -169,6 +169,7 @@ Volveremos a revisar las dos pruebas que realizamos al comienzo con 10 y 11 sold
 
 #### Formula
 Aplicamos la fórmula inicial y desarrollamos:
+
 $$
 y = ((2^3) - 10) 
 $$
@@ -180,6 +181,7 @@ $$
 $$
 LugarSuperviviente = 2(y)+1
 $$
+
 Podemos ver que coincide perfectamente con el lugar seguro que habíamos obtenido manualmente.
 $$
 LugarSuperviviente = 5
@@ -232,7 +234,8 @@ $$
 LugarSuperviviente = 2(y) + 1
 $$
 
-Como podemos ver, ha coincidido con lo que hicimos manualmente.
+Como podemos ver, ha coincidido con lo que hicimos manualmente.     
+
 $$
 LugarSuperviviente = 6+1 = 7
 $$
