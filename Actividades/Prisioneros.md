@@ -30,13 +30,16 @@ $$
 Por lo que podemos asumir que a fines prácticos es imposible que se haya creado un ciclo de 100 cajas.  
 
 Por ciclo entendamos algo así; partiendo de que cada caja tiene su posición, esto se aleatoriza:
-$$
+
+>
 [1] [2] [3] [4] [5] [6] [7] [8] 
-$$
+>
+
 Creando así un escenario donde unas se relacionan con otras a manera de fila o camino.
-$$
+
+>
 [8] [4] [5] [2] [3] [1] [6] [7] 
-$$
+>
 
 Si prestamos atención, podemos ver que 2 y 4 solo han intercambiado posiciones (Ciclo de 2 elementos) al igual que 3 y 5 (Ciclo de 2 elementos). De otra forma un poco más compleja; 8, 7, 6 y 1 están relacionandos,  La caja 1 tiene el número 8, la caja 8 tiene el número 7, la caja número 7 tiene el 6 y la caja número 6 tiene el número 1.  dando como resultado en este ejemplo 2 ciclos de 2 y uno de 4. Con esto podemos concluir que si vamos a la caja en la posición del número que nos ha salido, eventualmente encontraremos nuestro número.    
 
