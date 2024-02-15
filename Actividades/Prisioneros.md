@@ -103,7 +103,7 @@ Para obtener la probabilidad global de éxito, primero debemos suponer un muestr
 Sabemos que la probabilida de éxito con 100 prisioneros es: 
 
 $$
-P(exito 100) = 1-({1/50}+{1/51}+...+{1/100}+
+P(exito) = 1-({1/50}+{1/51}+...+{1/100}+
 $$
 
 Por lo que podemos replicarla aumentando el número dr prisioneros, obteniendo un resultado más fiable:
@@ -112,9 +112,11 @@ Por lo que podemos replicarla aumentando el número dr prisioneros, obteniendo u
 $$
 P(exito) = 1-({1/50}+{1/51}+...+{1/1000}) = 30.74 
 $$
+<br>
 $$
 P(exito) = 1-({1/50}+{1/51}+...+{1/1000000}) = 30.68533
 $$
+<br>
 $$
 P(exito) = 1-({1/50}+{1/51}+...+{1/1000000000}) = 30.68528
 $$
