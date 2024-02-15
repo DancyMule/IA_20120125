@@ -108,15 +108,15 @@ $$
 
 Por lo que podemos replicarla aumentando el número dr prisioneros, obteniendo un resultado más fiable:
 
-
+Probabilidad de éxito con 1000 prisioneros:
 $$
 P(exito) = 1-({1/50}+{1/51}+...+{1/1000}) = 30.74 
 $$
-<br>
+Probabilidad de éxito con 1000000 prisioneros:
 $$
 P(exito) = 1-({1/50}+{1/51}+...+{1/1000000}) = 30.68533
 $$
-<br>
+Probabilidad de éxito con 1000000000 prisioneros:
 $$
 P(exito) = 1-({1/50}+{1/51}+...+{1/1000000000}) = 30.68528
 $$
