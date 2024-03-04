@@ -1,0 +1,23 @@
+10:18 a. m. 27/02/2024
+
+
+El aprendizaje supervisado consta de la inlusión de las etiquetas de lo que se desea aprender.
+
+El no supervisado no tiene etiquetas.
+
+
+Un conjunto de datos, por lo general en formato CSV (DataSet) por lo general tendrá las condiciones de las caracteristicas a evaluar.
+
+Cuando el modelo se desarrolla se espera que se puede identificar el elemento, en la tabla antes mencionada se debe de incluiruna columna con el nombre 'etiqueta', con esto podemos generar que el modelo aprenda diferentes objetos con esa supervisión.
+
+
+El no supervisado no tiene la columna etiqueta. Se buscan clusters de información que tengan aprendizajes similiares mediante cameles para poder identificar a que pertenece .
+
+
+Siempre se busca reducir las imagenes que se usan, ya que cada pixel es una unidad a ser analizada
+
+Una imagen de 500x500 Tiene 250,000 pixeles por ser analizados, así que hay que reducirlo lo máximo posible.
+
+28x28 (283 pixeles) pixeles es el tamaño utilizado en el ejemplo del beisbol.
+
+Un data set puede fallar en el mundo real, ya que los modelos de muestreo pueden ser no tan exactos

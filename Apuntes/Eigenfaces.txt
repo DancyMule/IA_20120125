@@ -1,0 +1,6 @@
+10:10 a. m. 28/02/2024
+
+
+Eigenfaces es el nombre dado a un conjunto de vetores propios que se usan para encontrar patrones faciales, las caras propias contruyen una matriz por medio de un conjunto propio. 
+
+Las caracteristicas deben poder identificarse a traves de la baja nitidez.
