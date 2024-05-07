@@ -1,0 +1,170 @@
+Red neuronal simple "perceptron"
+
+
+
+Bias = neurona inhibidora/excitadora
+
+Esto es una neurona de una sola capa
+
+
+            Neurona (Σ)
+            -----------
+X1   →   W1 |         |
+            |         |
+X2   →   W2 |         | 
+            |         |
+X3   →   W3 |         |
+            -----------
+
+X1W1 + W2W2 +- Bias
+
+
+
+| X1 | X2 | target|
+|-----------------|
+| 1  | 1  |   1   |
+| 0  | 1  |   0   |
+| 1  | 0  |   0   |
+| 0  | 0  |   0   |
+
+
+
+
+Escalon es un cambio de tipo digital (1 o 0)
+
+Sigmoide es analogica trabajando como un rango (0 - 1, podría ser valido .5)
+
+                 1
+              --------
+               1+e^-x
+
+
+Las entradas W1 y W2 se ajustan continuamente para que el valor de salida se parezca a TARGET, mientras menos error está mejor (obviamente)
+
+
+Si estamos buscando un resultado de 1 y nuestra salida es de .9995 significa que nuestras entrafas ya están bien ajsutadas.
+
+Una neurona no puede separar una problema linealmente separable.
+
+
+
+Las redes multicapa pueden hacer cosas mas complejas.
+
+Mientras el vector de entrada sea mayor el resultado será más trabajado, se ajustará recursivamente hasta acercarse al valor de TARGET 
+
+
+Una red neuronal puede predecir información y clasificar info.
+
+Una neurona se encarga de una sola cosa; por lo que debe haber una neurona específica para cada aspecto a evaluar. Estas neuronas
+deben estar conectadas entre sí de forma coherente y funcional. No necesariamente hay mejores resultados entre más neuronas.
+
+
+1 epoca/generación = 1 iteración
+
+
+En el código Percep.c, cada generación se ajustan los pesos y hace su proceso. Se puede definir el error mínimo manualmente (Y puede tardar meses en entrenar)
+
+Linea 100: valores de entrada.
+
+
+Algo "simple" puede hacerse con un perecptrón en horas. Cuando los modelos son más densos puede durar meses
+
+Los pesos sinápticos son el ajuste adecuado de las entradas (potenciometros) para funcionar de la mejor manera.
+
+El problema de la red neuronal es el entrenamiento, ya que una vez entrenada las respuestas que nos puede proporcionar el modelo son instantaneas
+
+Las entradas de los potenciometros pueden no ser 1 o 0
+
+Cuando hay 2 clases (de resultados) el problema es linealmente separable, eso significa que no podremos separarlo (trabajarlo).
+Antes de comenzar un entrenamiento debemos graficar la informaciónpara saber si podemos usar esos datos o si debemos modificiarlos para que no sean linealmente separables 
+
+El perceptron no separa, debe auxiliarse de algo más. La información debe graficarse para conocer si son o no linealmente separables
+
+Utilizando las compuertas AND y OR (u otra compuerta) a manera de neuronas podemos establecer capas, donde las salidas de cada capa se convierten en los inputs de la sigueinte capa
+
+
+Capa (Se comporta como un Flip Flop):
+Peso sináptico → Neurona → Función de activación
+
+
+Podemos hacer transformaciones cuadráticas o polinómicas para poder ajustar los pesos sinápticos de entrada previos a entrar a la primera capa
+
+Las 'HIDDEN LAYERS' son para mantener hermético el proyecto; hace que no podamos saber lo que está sucediendo dentro.
+
+Si la información está sujeta a 2 tipos de resultados, es linealmente separable. 
+
+
+Actividad: Modelar (Como lo visto en clase) la red neuronal a cerca de ¿Quien ganó el debate presidencial?
+
+Los valores deben se caracteristicos hacia la clase específica lo validas y analizas
+
+
+Pesos sinápticos:
+   + Claudia
+      • Propuestas
+         Value = .15
+      • Aprobación social en redes sociales (menciones)
+         Value = .25
+      • Preguntas contestadas   
+         Value = .05
+      • Defensas personales realizadas
+         Value = .1
+      • Actos positivos comprobables
+         Value = .05
+   - Claudia
+      • Interrupciones del moderador 
+         Value = .3
+      • Ataques personales recibidos
+         Value = .4
+      • Argumentos no relacionados presentados
+         Value = .4
+      • Noticias negativas sobre el candidato
+         Value = .35
+      • Actos negativos comprobables
+         Value = .3
+
+   + Xochilt
+      • Propuestas
+         Value = .25
+      • Aprobación social en redes sociales (menciones)
+         Value = .15
+      • Preguntas contestadas   
+         Value = .25
+      • Defensas personales realizadas
+         Value = .1
+      • Actos positivos comprobables
+         Value = .05
+   - Xochilt
+      • Interrupciones del moderador 
+         Value = 0
+      • Ataques personales recibidos
+         Value = .35
+      • Argumentos no relacionados presentados
+         Value = .15
+      • Noticias negativas sobre el candidato
+         Value = .3
+      • Actos negativos comprobables
+         Value = .25
+
+   + Maynez
+      • Propuestas
+         Value = .25
+      • Aprobación social en redes sociales (menciones)
+         Value = .15
+      • Preguntas contestadas   
+         Value = .35
+      • Defensas personales realizadas
+         Value = .05
+      • Actos positivos comprobables
+         Value = .05
+   - Maynez
+      • Interrupciones del moderador 
+         Value = 0
+      • Ataques personales recibidos
+         Value = .1
+      • Argumentos no relacionados presentados
+         Value = .15
+      • Noticias negativas sobre el candidato
+         Value = .10
+      • Actos negativos comprobables
+         Value = 0
