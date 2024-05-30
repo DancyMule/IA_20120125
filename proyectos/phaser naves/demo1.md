@@ -1,3 +1,7 @@
+# Phaser Naves
+Este juego toma uno ya existente de Phaser, se implementan dos naves adicionales para aumentar su dificultad. Durante la ejecución del juego se alimentará constantemete la red neuronal Perceptrón para que posteriormente pueda jugar de forma autonoma
+
+```
 var w=800;
 var h=400;
 var jugador;
@@ -27,10 +31,11 @@ var estatusIzquierda;
 var nnNetwork , nnEntrenamiento, nnSalida, datosEntrenamiento=[];
 var modoAuto = false, eCompleto=false;
 
-
-
 var juego = new Phaser.Game(w, h, Phaser.CANVAS, '', { preload: preload, create: create, update: update, render:render});
+```
 
+## Función de precarga de assets
+```
 function preload() {
     juego.load.image('fondo', 'assets/game/fondo.jpg');
     juego.load.spritesheet('mono', 'assets/sprites/altair.png',32 ,48);
@@ -38,9 +43,11 @@ function preload() {
     juego.load.image('bala', 'assets/sprites/purple_ball.png');
     juego.load.image('menu', 'assets/game/menu.png');
 }
+```
 
-
-
+## Función de crear
+Aqui se establecerán los parámetros iniciales de cada elemento antes de comenzar el juego
+```
 function create() {
 
     juego.physics.startSystem(Phaser.Physics.ARCADE);
@@ -79,12 +86,32 @@ function create() {
     salto = juego.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
     avanza = juego.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
 
-    
+```
+## Definir el tamaño de la red
+En este caso se usan: 
+- 5 entradas: 
+    - Desplazamiento de la bala 1
+    - Velocidad de la bala 1
+    - Desplazamiento de la bala 2 
+    - Velocidad de la bala 2
+    - Desplazamiento de la bala 3
+    - Velocidad de la bala 3
+- 3 capas ocultas de 5 neuronas 
+- 5 salidas:
+    - Moverse a la izquierda (No moverse a la derecha) 
+    - Moverse a la derecha
+    - Moverse hacia arriba 
+    - Moverse hacia abajo (No saltar)
+```
     nnNetwork =  new synaptic.Architect.Perceptron(6, 5, 5, 5, 4);
     nnEntrenamiento = new synaptic.Trainer(nnNetwork);
-
 }
+```
 
+
+# Red neuronal
+Aqui están los métodos que obtienen las salidas de la red y los envían según su estatus
+```
 function enRedNeural(){
     nnEntrenamiento.train(datosEntrenamiento, {rate: 0.0003, iterations: 10000, shuffle: true});
 }
@@ -98,9 +125,7 @@ function datosDeEntrenamiento(param_entrada){
     var derecha=Math.round( nnSalida[2]*100 );
     var izquierda=Math.round( nnSalida[3]*100 );
     //[despBala , velocidadBala, despBala2, velocidadBala2, despBalaHorizontal3, velocidadBala3, despBalaVertical3, velocidadBala3]
-    console.log(" En el Aire %: "+ aire
-                +"\n En el suelo %: " + piso 
-                +"\n En la derecha %: " + derecha 
+    console.log("\n En la derecha %: " + derecha 
                 +"\n En la izquierda %: " + izquierda 
             );
             console.log("OUTPUTS: "+ nnSalida[2]>=nnSalida[3])
@@ -150,18 +175,24 @@ function mPausa(event){
             }
 
             
+            menu.destroy();
             resetVariables();
             resetVariables2();
             resetVariables3();
             resetPlayer();
             juego.paused = false;
-            menu.destroy();
+            
 
         }
     }
 }
 
+```
 
+## Eventos generales
+Estos metodos siempre se llaman en algún momento, generar el menu de pausa y resetear los componentes de al escena. Además también están los métodos de las mecánicas principales 
+
+```
 function resetVariables(){
     bala.body.velocity.x = 0;
     bala.position.x = w-100;
@@ -203,7 +234,12 @@ function correrAtras(){
 function Detenerse(){
     jugador.body.velocity.x = 0;
 }
+```
 
+
+## Update
+Aqui se actualiza cada frame del juego, aqui mismo se encarga de realizar los movimientos del juego segun el modo auto o manual. Ambos tienen sus propias mecánicas para hacerlo funcionar de la mejor manera posible.
+```
 function update() {
 
     fondo.tilePosition.x -= 1; 
@@ -271,7 +307,7 @@ console.log("VJ: "+jugador.body.velocity.x);
 
     console.log(jugador.position.x);
 
-    if( modoAuto == true  && bala.position.x>0 && jugador.body.onFloor()) {
+    if( modoAuto == true  && jugador.body.onFloor()) {
 
         console.log("Saltar: "+EntrenamientoSalto( [despBala , velocidadBala, despBala2, velocidadBala2, despBala3, velocidadBala3] ));
         if( EntrenamientoSalto( [despBala , velocidadBala, despBala2, velocidadBala2, despBala3, velocidadBala3] )  ){
@@ -348,8 +384,10 @@ console.log("VJ: "+jugador.body.velocity.x);
    }
 
 }
-
-
+```
+## Disparos
+Estos métodos se llaman para disparar las balas, se realiza cada que una bala llega a un posición específica
+```
 function disparo(){
     velocidadBala =  -1 * velocidadRandom(300,700);
     bala.body.velocity.y = 0 ;
@@ -358,7 +396,7 @@ function disparo(){
 }
 
 function disparo2(){
-    velocidadBala2 =  -1 * velocidadRandom(300,800);
+    velocidadBala2 =  -1 * velocidadRandom(300,600);
     bala2.body.velocity.y = 0 ;
     balaD2=true;
 }
@@ -369,15 +407,26 @@ function disparo3(){
     bala3.body.velocity.x = 1.60*velocidadBala3 ;
     balaD3=true;
 }
+```
 
+## Colisión
+En caso de que el jugador impacte con la bola, este método se dispara.
+```
 function colisionH(){
     pausa();
 }
-
+```
+## Velocidad bese de las balas
+En este metodo se aleatoriza la velocidad de todas las balas según los parámetros que le llegan
+```
 function velocidadRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+```
 
-function render(){
-
+## Render
+opcionalmente podemos renderizar el estado del juego o información adicional
+```
+function render() {
 }
+```
